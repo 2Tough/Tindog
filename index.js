@@ -1,7 +1,8 @@
 import Dog from './Dog.js'
-import dogsData from './data.js'
+import dogs from './data.js'
+
 let currentDogIndex = 0
-let currentDog = new Dog(dogsData[currentDogIndex])
+let currentDog = new Dog(dogs[currentDogIndex])
 
 const badge = document.getElementById('badge')
 
@@ -21,7 +22,7 @@ function getNewDog() {
     if(currentDogIndex == 3) {
         document.getElementById('card').innerHTML = `<div class='no-profile-text'>No more profiles. Try again later.</div>`
     } else {
-    currentDog = new Dog(dogsData[currentDogIndex])
+    currentDog = new Dog(dogs[currentDogIndex])
     render()
     }
     
@@ -49,7 +50,3 @@ function no() {
 function removeBadge() {
     badge.innerHTML = ``
 }
-
-
-
-

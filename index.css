@@ -20,8 +20,6 @@ body {
     line-height: 32px;
     padding-left: 0.5rem;
     padding-bottom: 0.5rem;
-
-
 }
 
 button {
@@ -30,9 +28,7 @@ button {
     background: #FFFFFF;
     padding: 1.4rem;
     box-shadow: 0px 10px 20px 0px #E9E9EA;
-    
-    
-}
+ }
 
 .actions {
     display: flex;
@@ -79,7 +75,6 @@ header {
 
 .no-profile-text {
     
-    border: 1px solid red;
     text-align: center;
     font-weight: 900;
     padding: 20rem 0;
