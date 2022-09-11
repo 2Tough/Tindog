@@ -1,51 +1,54 @@
-// Remember to import the data and Dog class!
-import dogs from '/data.js'
-import Dog from '/Dog.js'
+import Dog from './Dog.js'
+import dogsData from './data.js'
+let currentDogIndex = 0
+let currentDog = new Dog(dogsData[currentDogIndex])
 
-let dogArray = [0, 1, 2]
-let getDogCard = dogArray[0]
-let doggoGet = new Dog(dogs[getDogCard])
-
-const like = document.getElementById('like-btn')
-const reject = document.getElementById('reject-btn')
+const badge = document.getElementById('badge')
 
 
-let profile = document.getElementById('profile')
+document.getElementById("accept-button").addEventListener('click', yes)
+document.getElementById("reject-button").addEventListener('click', no)
 
 
-
-doggoGet.hasBeenSwiped = true
-
-
-function getNewProfile() {
-     doggoGet = new Dog(dogs[dogArray.shift()])
-     doggoGet.hasBeenSwiped = true
-     render()
-
-        
-}
-
-reject.addEventListener("click", function() {
-    getNewProfile()
-    = true
-    document.getElementById('badge-sign').innerHTML = 
-        `<div class="badge" id='badge-sign'>
-         <img class='badges' src='images/badge-like.png'>   
-         </div>
-        
-        `
-});
-
-like.addEventListener("click", function() {
-    getNewProfile()
-});
+render()
 
 function render() {
-   
-    profile.innerHTML = doggoGet.getDogHtml() 
+    document.getElementById('card').innerHTML = currentDog.getDogHtml()
 }
 
+function getNewDog() {
+    currentDogIndex+=1
+    if(currentDogIndex == 3) {
+        document.getElementById('card').innerHTML = `<div class='no-profile-text'>No more profiles. Try again later.</div>`
+    } else {
+    currentDog = new Dog(dogsData[currentDogIndex])
+    render()
+    }
+    
+}
 
+function yes() {
+    currentDog.setMatchStatus(true)
+    setTimeout(getNewDog, 500)
+    badge.innerHTML = `<div>
+                       <img class='badge-yes' src='images/badge-like.png'>
+                       </div>`
+    setTimeout(removeBadge, 500)
+    
+}
+
+function no() {
+    currentDog.setMatchStatus(false)
+    setTimeout(getNewDog, 500)
+    badge.innerHTML = `<div>
+                       <img class='badge-nope' src='images/badge-nope.png'>
+                       </div>`
+    setTimeout(removeBadge, 500)
+}
+
+function removeBadge() {
+    badge.innerHTML = ``
+}
 
 
 

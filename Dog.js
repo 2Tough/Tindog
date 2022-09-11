@@ -2,37 +2,27 @@
 
 class Dog {
     constructor(data) {
-            Object.assign(this, data)
+        Object.assign(this, data)
+    }
+    
+    setMatchStatus(bool) {
+        this.hasBeenLiked = bool
+        this.hasBeenSwiped = true
     }
     
     getDogHtml() {
-       const { name, avatar, age, bio } = this
-       const badge = getLikeOrNope()
+        const { name, avatar, age, bio } = this
         return `
-                <div id="profile" class="main-body">
-                    <div class="text">${bio}</div>
-                    <div class="teddy">${name}, ${age}</div>
-                    <div class="profile-pic">
-                    <img class="profile-image" src="${avatar}">
-                </div>`
+            <div class="feature-suggestion">
+                <div class="dog-info">
+                    <div class='basic-info'> ${name}, ${age} </div>
+                    <div class="dog-bio">
+                        ${bio}
+                    </div>
+                </div>
+                <img class="dog-img" src="${avatar}">
+            </div>`
     }
-    
-    getLikeOrNope() {
-        if(this.hasBeenSwiped && this.hasBeenLiked == false) {
-            return ''
-        } else if(this.hasBeenLiked) {
-            return `<div class="badge" id='badge-sign'>
-                     <img class='badges' src='images/badge-like.png'>   
-                    </div>`
-        }{}
-            return `<div class="badge" id='badge-sign'>
-                     <img class='badges' src='images/badge-nope.png'>   
-                    </div>`
-        
-    }
-    
-
 }
-
 
 export default Dog

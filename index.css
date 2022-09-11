@@ -1,109 +1,88 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: black;
+    font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.Main-defaul-state {
-   
-    height: 100vh;
-    max-width: 450px;
-    margin: 0 auto;
-    background: #4a5667;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.basic-info {
+
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 34px;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+
+}
+
+.dog-bio {
+    color: #B7B7B7;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+
+
+}
+
+button {
+    border: none;
+    border-radius: 40px;
     background: #FFFFFF;
-    color: #F8F8F8;
+    padding: 1.4rem;
+    box-shadow: 0px 10px 20px 0px #E9E9EA;
+    
     
 }
 
-img {
-    
-    object-fit: contain;
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+       
 }
 
-.header {
+#card .dog-img {
+    width: 100%;
+}
+
+#card {
+    position: relative;
+    width: 100%;
+}
+
+.dog-info {
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    left: 10px;
+}
+
+header {
     display: flex;
     justify-content: space-between;
-    background: #FFFFFF;
-    width: 80%;
-    height: 3rem;
-    padding-top: 0.5rem;
 }
 
-
-.profile-pic {
-    align-content: center;
-
-}
-.profile-pic img {
-    height: 98%;
-    width: auto;
-    max-width: 100%;
-    border-radius: 10px;
-    
-    
-}
-
-.teddy {
-  position: absolute;
-  bottom: 180px;
-  
-  font-size: 32px; 
-  font-weight: 700;
-}
-
-.text {
-  align-self: flex-end;
-  position: absolute; 
-     
-  bottom: 160px;
-  
-  font-size: 16px;  
-}
-
-
-#reject-btn:hover {
+#reject-button:hover {
     background: #FFE7EF
 }
 
-#like-btn:hover {
+#accept-button:hover {
     background: #DBFFF4;
-
 }
 
-.buttons {
-    width: 55%;
-    display: flex;
-    justify-content: space-around;
-    border-radius: 40px;
-    background: #FFFFFF;
-    
-    
-
-    
-    
-}
-
-.btn {
-    padding: 1.4rem;
-    box-shadow: 0px 10px 20px 0px #E9E9EA;
-    border-radius: 50px
-
-}
-
-.badge {
+.badge-yes, .badge-nope {
     position: absolute;
-    top: 90px;
-        
-    transform: rotate(-30deg)
-    
-
+    top: 11%;
+    z-index: 2;
+    width: 42%;
+    transform: rotate(-40deg);
 }
 
-.badges {
-    width: 95%;
+.no-profile-text {
     
-    height: 90px;
+    border: 1px solid red;
+    text-align: center;
+    font-weight: 900;
+    padding: 20rem 0;
 }
+
+
