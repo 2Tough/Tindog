@@ -4,13 +4,11 @@ body {
 
 
 .basic-info {
-
     font-size: 32px;
     font-weight: 600;
     line-height: 34px;
     padding-bottom: 0.5rem;
     padding-left: 0.5rem;
-
 }
 
 .dog-bio {
@@ -33,7 +31,6 @@ button {
 .actions {
     display: flex;
     justify-content: space-evenly;
-       
 }
 
 #card .dog-img {
@@ -74,7 +71,6 @@ header {
 }
 
 .no-profile-text {
-    
     text-align: center;
     font-weight: 900;
     padding: 20rem 0;
