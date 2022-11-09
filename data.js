@@ -1,7 +1,7 @@
 const dogs = [
     {
         name: "Rex",
-        avatar: "images/dog-rex.jpg",
+        avatar: "images/Coco-735.JPG",
         age: 25,
         bio: "Art. Literature. Natural wine. Yoga.",
         hasBeenSwiped: false,
