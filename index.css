@@ -2,6 +2,10 @@ body {
     font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body {
+    height: 40%;
+}
+
 
 .basic-info {
     font-size: 32px;
